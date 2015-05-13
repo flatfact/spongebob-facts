@@ -529,25 +529,6 @@ end
 		bottom:0px;
 	}
 /*there you go Rarity*/
-.ghost-button {
-  display: inline-block;
-  width: 200px;
-  padding: 8px;
-  color: #fff;
-  border: 2px solid #fff;
-  text-align: center;
-  outline: none;
-  text-decoration: none;
-  transition: background-color 0.2s ease-out,
-              color 0.2s ease-out;
-}
-.ghost-button:hover,
-.ghost-button:active {
-  background-color: #fff;
-  color: #000;
-  transition: background-color 0.3s ease-in,
-              color 0.3s ease-in;
-}
 
 body {
     text-decoration-color: white;
@@ -591,7 +572,39 @@ p {
 		color: #fff;
     }
         
+   /* สำหรับพวกหำเล็ก
+	* --------------------------------------- */       
     @media only screen and (max-width: 767px) {
+.ghost-button {
+  display: inline-block;
+  width: 200px;
+  padding: 8px;
+  color: #fff;
+  border: 2px solid #fff;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  transition: background-color 0.2s ease-out,
+              color 0.2s ease-out;
+   margin-bottom: 10px;
+}
+.ghost-button:hover,
+.ghost-button:active {
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.3s ease-in,
+              color 0.3s ease-in;
+}
+    foot {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+    
+    .content {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
 
 num {
     font-size: 3em;
@@ -670,14 +683,6 @@ num {
         background-repeat: no-repeat;
         background-position: center;
     }
-     #section10{
-        background-color: #E0E0E0;
-        background-position: center;
-    }
-     #section11{
-        background-color: #F5F5F5;
-        background-position: center;
-    }
 
     #section0 h1{
 		color: white;
@@ -692,7 +697,42 @@ num {
         color: black;
     }
         
+/* สำหรับพวกหำใหญ่
+	* --------------------------------------- */
+ @media only screen and (min-width: 767px) {
 
+     .ghost-button {
+  display: inline-block;
+  width: 200px;
+  padding: 8px;
+  color: #fff;
+  border: 2px solid #fff;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  transition: background-color 0.2s ease-out,
+              color 0.2s ease-out;
+}
+.ghost-button:hover,
+.ghost-button:active {
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.3s ease-in,
+              color 0.3s ease-in;
+}
+     
+foot {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.content {
+margin-left: 50px;
+margin-right: 50px;
+word-wrap: break-word;
+}
+
+
+ }
 	</style>
 
 	
@@ -712,10 +752,10 @@ num {
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
 				anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage', '7thPage', '8thPage', '9thPage','10thPage','lastPage','About'],
-				sectionsColor: ['#827F18', '#000000', '#000000', '#000000','#000000','#000000','#7F7F7F','#000000','#000000','#000000','#E0E0E0'],
+				sectionsColor: ['#827F18', '#000000', '#000000', '#000000','#000000','#000000','#7F7F7F','#000000','#000000','#000000','#FAFAFA'],
 				navigation: true,
 				navigationPosition: 'right',
-				navigationTooltips: ['Top', '1', '2', '3', '4', '5', '6', '7', '8','9','Comment', 'About'],
+				navigationTooltips: ['Top', '1', '2', '3', '4', '5', '6', '7', '8','9', 'About'],
 				responsive: 900
 			});
 		});
@@ -727,7 +767,7 @@ num {
     FB.init({
       appId      : '1383093242011076',
       xfbml      : true,
-      version    : 'v2.2'
+      version    : 'v2.3'
     });
   };
 
@@ -744,61 +784,56 @@ num {
 <div id="fullpage">
 	<div class="section" id="section0">
 		<div class="intro">
-			<h1><num>9</num><br>เรื่องที่คุณ(อาจ)ยังไม่รู้เกี่ยวกับ “SpongeBob”<br><div class="fb-like" data-href="//hoof.flatfact.com/spongebob-facts/" data-layout="box_count" data-action="like" data-show-faces="true" data-share="false"></div><a href="#secondPage"><div class="arrow bounce"></div></a></h1>
+			<h1><num>9</num><br>เรื่องที่คุณ(อาจ)ยังไม่รู้เกี่ยวกับ “SpongeBob”<br><div class="fb-like" data-href="//hoof.flatfact.com/spongebob-facts/" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"></div><a href="#secondPage"><div class="arrow bounce"></div></a></h1>
 		</div>
 	</div>
 	<div class="section" id="section1">
 			<div class="intro">
-				<h2><num>1</num><br>Stephen Hillenburg ผู้สร้างการ์ตูนเรื่อง SpongeBob<br>เคยเป็นนักชีววิทยาทางทะเลมาก่อน</h2><br><a class="ghost-button" href="http://en.wikipedia.org/wiki/Stephen_Hillenburg">SOURCE</a>
+				<h2><num>1</num><br><div class="content">Stephen Hillenburg ผู้สร้างการ์ตูนเรื่อง SpongeBob เคยเป็นนักชีววิทยาทางทะเลมาก่อน</div></h2><br><a class="ghost-button" href="http://en.wikipedia.org/wiki/Stephen_Hillenburg">SOURCE</a>
 			</div>
 	</div>
 	<div class="section" id="section2">
 		<div class="intro">
-			<h2><num>2</num><br>ในหลายตอนของ SpongeBob จะมีปลาสีน้ำเงินเป็นตัวประกอบ<br>และหากสังเกตดีๆจะพบว่าตัวละครตัวนี้มีอวัยวะเพศยื่นออกมา</h2><br><a class="ghost-button" href="https://youtube.com/watch?v=xMNgdLXOSEo">SOURCE</a>
+            <h2><num>2</num><br><div class="content">ในหลายตอนของ SpongeBob จะมีปลาสีน้ำเงินเป็นตัวประกอบ และหากสังเกตดีๆจะพบว่าตัวละครตัวนี้มีอวัยวะเพศยื่นออกมา</div></h2><br><a class="ghost-button" href="https://youtube.com/watch?v=xMNgdLXOSEo">SOURCE</a>
 		</div>
 	</div>
     <div class="section" id="section3">
 		<div class="intro">
-			<h2><num>3</num><br>ตัวละคร SpongeBob ทำงานในร้าน<br>Krusty Krab มากว่า 34 ปีแล้ว</h2><br><a class="ghost-button" href="http://www.omgfacts.com/lists/333/11-Spongebob-Facts-Even-Superfans-Don-t-Know">SOURCE</a>
+            <h2><num>3</num><br><div class="content">ตัวละคร SpongeBob ทำงานในร้าน Krusty Krab มากว่า 34 ปีแล้ว</div></h2><br><a class="ghost-button" href="http://www.omgfacts.com/lists/333/11-Spongebob-Facts-Even-Superfans-Don-t-Know">SOURCE</a>
 		</div>
 	</div>
      <div class="section" id="section4">
 		<div class="intro">
-			<h2><num>4</num><br>การ์ตูนเรื่อง SpongeBob ออกอากาครั้งแรก<br>ในวันที่ 1 พฤษภาคม ค.ศ.1999</h2><br><a class="ghost-button" href="https://en.wikipedia.org/wiki/SpongeBob_SquarePants">SOURCE</a>
+            <h2><num>4</num><br><div class="content">การ์ตูนเรื่อง SpongeBob ออกอากาครั้งแรก ในวันที่ 1 พฤษภาคม ค.ศ.1999</div></h2><br><a class="ghost-button" href="https://en.wikipedia.org/wiki/SpongeBob_SquarePants">SOURCE</a>
 		</div>
 	</div>
     <div class="section" id="section5">
 		<div class="intro">
-			<h2><num>5</num><br>Stephen Hillenburg ลาออกจากการเป็นนักชีววิทยามาสร้างการ์ตูน<br>เพราะเขาอยากให้ความรู้เกี่ยวกับสัตว์ทะเลแก่เด็กในรูปแบบที่เข้าใจง่าย</h2><br><a class="ghost-button" href="https://en.wikipedia.org/wiki/SpongeBob_SquarePants">SOURCE</a>
+            <h2><num>5</num><br><div class="content">Stephen Hillenburg ลาออกจากการเป็นนักชีววิทยามาสร้างการ์ตูน เพราะเขาอยากให้ความรู้เกี่ยวกับสัตว์ทะเลแก่เด็กในรูปแบบที่เข้าใจง่าย</div></h2><br><a class="ghost-button" href="https://en.wikipedia.org/wiki/SpongeBob_SquarePants">SOURCE</a>
 		</div>
 	</div>
     <div class="section" id="section6">
 		<div class="intro">
-			<h2><num>6</num><br>การ์ตูนเรื่อง SpongeBob ออกอากาศมากว่า 189 ตอนแล้ว<br>และยังเหลืออีกประมาณ 369 ตอนที่ยังไม่ได้ออกอากาศ</h2><br><a class="ghost-button" href="https://en.wikipedia.org/wiki/SpongeBob_SquarePants">SOURCE</a>
+            <h2><num>6</num><br><div class="content">การ์ตูนเรื่อง SpongeBob ออกอากาศมากว่า 189 ตอนแล้ว และยังเหลืออีกประมาณ 369 ตอนที่ยังไม่ได้ออกอากาศ</div></h2><br><a class="ghost-button" href="https://en.wikipedia.org/wiki/SpongeBob_SquarePants">SOURCE</a>
 		</div>
 	</div>
     <div class="section" id="section7">
 		<div class="intro">
-            <h2><num>7</num><br>การ์ตูน SpongeBob ใน Season 1<br>สร้างโดยใช้เทคนิคการสร้างแบบวาดด้วยมือโดยใช้สีน้ำ<br>ก่อนจะเปลี่ยนมาใช้คอมพิวเตอร์ในปี ค.ศ.2009</h2><br><a class="ghost-button" href="https://en.wikipedia.org/wiki/SpongeBob_SquarePants" >SOURCE</a>
+            <h2><num>7</num><br><div class="content">การ์ตูน SpongeBob ใน Season 1 สร้างโดยใช้เทคนิคการสร้างแบบวาดด้วยมือโดยใช้สีน้ำก่อนจะเปลี่ยนมาใช้คอมพิวเตอร์ในปี ค.ศ.2009</div></h2><br><a class="ghost-button" href="https://en.wikipedia.org/wiki/SpongeBob_SquarePants" >SOURCE</a>
 		</div>
 	</div>
     <div class="section" id="section8">
 		<div class="intro">
-            <h2><num>8</num><br>ผู้ชมการ์ตูนเรื่อง SpongeBob กว่า 40% หรือคิดเป็น 2.2ล้านคน<br>เป็นผู้ใหญ่อายุ 18-34 ปี</h2><br><a class="ghost-button" href="https://en.wikipedia.org/wiki/Mr._Bean">SOURCE</a>
+            <h2><num>8</num><br><div class="content">ผู้ชมการ์ตูนเรื่อง SpongeBob กว่า 40% หรือคิดเป็น 2.2 ล้านคน เป็นผู้ใหญ่อายุ 18-34 ปี</div></h2><br><a class="ghost-button" href="https://en.wikipedia.org/wiki/Mr._Bean">SOURCE</a>
 		</div>
 	</div>
 <div class="section" id="section9">
 		<div class="intro">
-            <h2><num>9</num><br>ในปี ค.ศ.2011 มีการค้นพบเห็ดสายพันธุ์ใหม่<br>ผู้ค้นพบได้ตั้งชื่อว่า <i>Spongiforma squarepantsii</i> โดยมาจากชื่อการ์ตูน SpongeBob SquarePants นั่นเอง</h2><br><a class="ghost-button" href="https://en.wikipedia.org/wiki/Spongiforma_squarepantsii">SOURCE</a>
+            <h2><num>9</num><br><div class="content">ในปี ค.ศ.2011 มีการค้นพบเห็ดสายพันธุ์ใหม่ ผู้ค้นพบได้ตั้งชื่อว่า <i>Spongiforma squarepantsii</i> โดยมาจากชื่อการ์ตูน SpongeBob SquarePants นั่นเอง</div></h2><br><a class="ghost-button" href="https://en.wikipedia.org/wiki/Spongiforma_squarepantsii">SOURCE</a>
 		</div>
 	</div>
 
-    <div class="section" id="section10">
-		<div class="intro"><h1>Comments!</h1>
-           <div class="fb-like" data-href="//hoof.flatfact.com/spongebob-facts/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div><br><br><div class="fb-comments" data-href="//hoof.flatfact.com/spongebob-facts/" data-numposts="3" data-colorscheme="light"></div>
-        </div>
-	</div>
     <div class="section" id="section11">
-    <div class="intro"><h2></div><div align="center">CC Subthai_Production, Hoof.fr and Flatfact.com<br>บทความต่างๆในเว็บไซต์ อนุญาตให้นำไปเผยแพร่และแก้ไขได้โดยต้องอ้างอิงที่มาและไม่ใช้เพื่อการค้า ตาม<a href="https://creativecommons.org/licenses/by-nc/4.0/">สัญญาอนุญาตครีเอทีฟคอมมอนส์ 4.0 International</a>.<br>Powered by Jquery Fullpage.js on<a href="https://github.com/alvarotrigo/fullPage.js"> Github</a><br><br><a class="button button-primary" href="//facebook.com/subthaiTV">Facebook Page</a><a class="button button-primary" href="//github.com/flatfact">Fork Me On GitHub</a><br><br><br><br><a href="#firstPage"><div id="animated-example" class="animated bounce"><img src="//farm8.staticflickr.com/7601/16623750648_f4c543a294_o.png" width="40px"></div></a></div></div></div></div></h2>
+    <div class="intro"><h2></div><div align="center"><foot>CC Subthai_Production, Hoof.fr and Flatfact.com<br>บทความต่างๆในเว็บไซต์ อนุญาตให้นำไปเผยแพร่และแก้ไขได้โดยต้องอ้างอิงที่มาและไม่ใช้เพื่อการค้า ตาม<a href="https://creativecommons.org/licenses/by-nc/4.0/">สัญญาอนุญาตครีเอทีฟคอมมอนส์ 4.0 International</a>.</foot><br>Script by Jquery Fullpage.js on<a href="https://github.com/alvarotrigo/fullPage.js"> Github</a><br><br><a class="button button-primary" href="//facebook.com/subthaiTV">Facebook Page</a><a class="button button-primary" href="//github.com/flatfact">Fork Me On GitHub</a><br><br><br><br><a href="#firstPage"><div id="animated-example" class="animated bounce"><img src="//farm8.staticflickr.com/7601/16623750648_f4c543a294_o.png" width="40px"></div></a></div></div></div></div></h2>
 </body>
 </html>
